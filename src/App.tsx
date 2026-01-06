@@ -1,31 +1,53 @@
-import { APITester } from "./APITester";
+import React from "react";
 import "./index.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import logo from "./logo.svg";
-import reactLogo from "./react.svg";
+import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import Settings from "./pages/Settings";
+import NotFound from "./pages/NotFound";
 
 export function App() {
   return (
-    <div className="max-w-7xl mx-auto p-8 text-center relative z-10">
-      <div className="flex justify-center items-center gap-8 mb-8">
-        <img
-          src={logo}
-          alt="Bun Logo"
-          className="h-24 p-6 transition-all duration-300 hover:drop-shadow-[0_0_2em_#646cffaa] scale-120"
-        />
-        <img
-          src={reactLogo}
-          alt="React Logo"
-          className="h-24 p-6 transition-all duration-300 hover:drop-shadow-[0_0_2em_#61dafbaa] animate-[spin_20s_linear_infinite]"
-        />
-      </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-gray-50 text-gray-900">
+        <NavBar />
 
-      <h1 className="text-5xl font-bold my-4 leading-tight">Bun + React</h1>
-      <p>
-        Edit <code className="bg-[#1a1a1a] px-2 py-1 rounded font-mono">src/App.tsx</code> and save to test HMR
-      </p>
-      <APITester />
-    </div>
+        <main className="max-w-7xl mx-auto p-8">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+
+          <div className="mt-8">
+            <div className="p-4 bg-white rounded shadow-sm text-left">
+              <h3 className="font-semibold mb-2">API Tester</h3>
+              <p className="text-sm text-gray-600 mb-3">Try calling the bundled API backend.</p>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={async () => {
+                    try {
+                      const r = await fetch('/api/hello');
+                      const j = await r.json();
+                      alert(JSON.stringify(j));
+                    } catch (e) {
+                      alert('Error: ' + String(e));
+                    }
+                  }}
+                  className="px-3 py-1 bg-indigo-600 text-white rounded"
+                >
+                  Call /api/hello
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 
