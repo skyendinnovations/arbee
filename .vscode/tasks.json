@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "List lucide-react icon exports",
+			"type": "shell",
+			"command": "bun run lucide-icons-demo.js",
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}
