@@ -3,6 +3,8 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
+import Footer from "./Footer";
+
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Settings from "./pages/Settings";
@@ -11,7 +13,7 @@ import NotFound from "./pages/NotFound";
 export function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-50 text-gray-900">
+      <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
         <NavBar />
 
         <main className="mx-auto">
@@ -22,30 +24,9 @@ export function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-
-          <div className="mt-8">
-            <div className="p-4 bg-white rounded shadow-sm text-left">
-              <h3 className="font-semibold mb-2">API Tester</h3>
-              <p className="text-sm text-gray-600 mb-3">Try calling the bundled API backend.</p>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={async () => {
-                    try {
-                      const r = await fetch('/api/hello');
-                      const j = await r.json();
-                      alert(JSON.stringify(j));
-                    } catch (e) {
-                      alert('Error: ' + String(e));
-                    }
-                  }}
-                  className="px-3 py-1 bg-indigo-600 text-white rounded"
-                >
-                  Call /api/hello
-                </button>
-              </div>
-            </div>
-          </div>
         </main>
+
+        <Footer />
       </div>
     </BrowserRouter>
   );
