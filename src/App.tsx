@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
+import WhyChooseUs from "./pages/WhyChooseUs";
 
 export function App() {
   return (
@@ -45,6 +46,7 @@ export function App() {
             </div>
           </div>
         </main>
+        <WhyChooseUs />
         <Footer />
       </div>
     </BrowserRouter>
