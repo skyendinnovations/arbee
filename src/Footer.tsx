@@ -8,8 +8,7 @@ import {
   ShieldCheck,
   Clock,
 } from "lucide-react";
-import logo from "./logo.svg";
-
+import logo from './logo.png';
 const Footer = () => {
   return (
     <footer className="bg-[#f7f7f5] border-t border-[#e2e2e2] mt-16 text-[#232323]">
