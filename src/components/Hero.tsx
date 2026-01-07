@@ -8,7 +8,7 @@ export default function Hero({
   imageUrl = "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2070&q=80",
 }: HeroProps) {
   return (
-    <header className="relative w-full min-h-screen flex items-center overflow-hidden bg-black" role="banner">
+    <header className="relative w-full min-h-screen flex-1 items-center overflow-hidden bg-black" role="banner">
       <div className="absolute inset-0 z-0">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -24,11 +24,11 @@ export default function Hero({
         />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
+
           <div className="lg:col-span-7 space-y-6 sm:space-y-8">
-            
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] text-white tracking-tight">
               We Don't Build Structures.
               <span className="block mt-2 text-gray-300">
@@ -38,7 +38,7 @@ export default function Hero({
 
             <div className="border-l-4 border-white pl-4 sm:pl-6 py-2">
               <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-                Every foundation we lay, every beam we raise, every project we deliver — 
+                Every foundation we lay, every beam we raise, every project we deliver —
                 built with precision, integrity, and a commitment to excellence that spans generations.
               </p>
             </div>
@@ -79,7 +79,7 @@ export default function Hero({
           <div className="lg:col-span-5 hidden lg:block">
             <div className="relative p-8 lg:p-10 border-2 border-white/30 backdrop-blur-sm bg-white/5">
               <div className="absolute -top-4 -left-4 text-8xl font-serif text-white/20" aria-hidden="true">"</div>
-              
+
               <blockquote className="relative z-10 space-y-4">
                 <p className="text-xl lg:text-2xl font-light text-white leading-relaxed italic">
                   Excellence is not a destination. It's the standard we build into every square foot.

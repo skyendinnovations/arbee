@@ -14,7 +14,7 @@ export function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
         <NavBar />
-        <main className="max-w-7xl mx-auto p-8 flex-1">
+        <main className="mx-auto flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
