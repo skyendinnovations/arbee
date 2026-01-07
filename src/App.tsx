@@ -14,7 +14,7 @@ export function App() {
       <div className="min-h-screen bg-gray-50 text-gray-900">
         <NavBar />
 
-        <main className="max-w-7xl mx-auto p-8">
+        <main className="mx-auto">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
