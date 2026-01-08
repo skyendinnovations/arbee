@@ -12,7 +12,7 @@ import logo from './logo.png';
 const Footer = () => {
   return (
     <footer className="bg-[#f7f7f5] border-t border-[#e2e2e2] mt-16 text-[#232323]">
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
         {/* Brand */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
@@ -74,25 +74,25 @@ const Footer = () => {
         </nav>
 
         {/* Contact */}
-        <address className="not-italic">
+        <address className="not-italic space-y-2 flex flex-col">
           <h3 className="text-sm font-bold mb-4 tracking-widest text-[#ff9900]">
             CONTACT
           </h3>
-          <ul className="space-y-2 text-[#444]">
-            <li className="flex items-start gap-2">
-              <MapPin className="w-5 h-5 mt-0.5 text-[#ff9900]" />
+          <ul className="space-y-2 text-[#444] flex flex-col">
+            <li className="flex items-center gap-2 break-all">
+              <MapPin className="w-5 h-5 text-[#ff9900] flex-shrink-0" />
               <span>123 Industrial Parkway, NY 10001</span>
             </li>
-            <li className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-[#ff9900]" />
+            <li className="flex items-center gap-2 break-all">
+              <Phone className="w-5 h-5 text-[#ff9900] flex-shrink-0" />
               <span>+1 (555) 123-4567</span>
             </li>
-            <li className="flex items-center gap-2">
-              <Mail className="w-5 h-5 text-[#ff9900]" />
+            <li className="flex items-center gap-2 break-all">
+              <Mail className="w-5 h-5 text-[#ff9900] flex-shrink-0" />
               <span>contact@arbeeconstructions.com</span>
             </li>
-            <li className="flex items-center gap-2">
-              <Clock className="w-5 h-5 text-[#ff9900]" />
+            <li className="flex items-center gap-2 break-all">
+              <Clock className="w-5 h-5 text-[#ff9900] flex-shrink-0" />
               <span>Mon–Fri: 8:00–18:00</span>
             </li>
           </ul>
