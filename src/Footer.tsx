@@ -11,13 +11,8 @@ import {
 import logo from './logo.png';
 const Footer = () => {
   return (
-<<<<<<< Updated upstream
-    <footer className="bg-[#f7f7f5] mt-0 text-[#232323]">
-      <div className="max-w-7xl mx-auto p-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-12">
-=======
     <footer className="bg-[#f7f7f5] text-[#232323]">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10">
->>>>>>> Stashed changes
         {/* Brand */}
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
@@ -79,28 +74,10 @@ const Footer = () => {
         </nav>
 
         {/* Contact */}
-        <address className="not-italic space-y-2 flex flex-col">
+        <address className="not-italic">
           <h3 className="text-sm font-bold mb-4 tracking-widest text-[#ff9900]">
             CONTACT
           </h3>
-<<<<<<< Updated upstream
-          <ul className="space-y-2 text-[#444] flex flex-col">
-            <li className="flex items-center gap-2 whitespace-nowrap overflow-x-auto">
-              <MapPin className="w-5 h-5 text-[#ff9900] flex-shrink-0" />
-              <span>123 Industrial Parkway, NY 10001</span>
-            </li>
-            <li className="flex items-center gap-2 whitespace-nowrap overflow-x-auto">
-              <Phone className="w-5 h-5 text-[#ff9900] flex-shrink-0" />
-              <span>+1 (555) 123-4567</span>
-            </li>
-            <li className="flex items-center gap-2 whitespace-nowrap overflow-x-auto">
-              <Mail className="w-5 h-5 text-[#ff9900] flex-shrink-0" />
-              <span>contact@arbeeconstructions.com</span>
-            </li>
-            <li className="flex items-center gap-2 whitespace-nowrap overflow-x-auto">
-              <Clock className="w-5 h-5 text-[#ff9900] flex-shrink-0" />
-              <span>Mon–Fri: 8:00–18:00</span>
-=======
           <ul className="space-y-2 text-[#444]">
             <li className="flex items-center gap-2 whitespace-nowrap">
               <MapPin className="w-5 h-5 text-[#ff9900] flex-shrink-0" />
@@ -117,7 +94,6 @@ const Footer = () => {
             <li className="flex items-center gap-2 whitespace-nowrap">
               <Clock className="w-5 h-5 text-[#ff9900] flex-shrink-0" />
               <span className="w-full">Mon–Fri: 8:00–18:00</span>
->>>>>>> Stashed changes
             </li>
           </ul>
         </address>
@@ -125,7 +101,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-[#e2e2e2] bg-[#f2f2f0]">
-        <div className="max-w-7xl mx-auto px-2 py-1 flex flex-col md:flex-row justify-between items-center text-sm text-[#6a6a6a]">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm text-[#6a6a6a]">
           <span>© 2026 Arbee Constructions. All rights reserved.</span>
           <nav className="flex gap-6 mt-2 md:mt-0">
             <a href="/privacy" className="hover:text-[#ff9900]">Privacy Policy</a>
