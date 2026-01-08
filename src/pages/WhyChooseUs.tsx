@@ -30,8 +30,8 @@ const features = [
 
 export default function WhyChooseUs() {
 	return (
-		<div className="min-h-screen bg-[#f7f7f5] flex flex-col items-center py-16 px-4">
-			<div className="max-w-3xl text-center mb-12">
+		<div className="bg-[#f7f7f5] flex flex-col items-center p-8 m-0">
+			<div className="max-w-3xl text-center mb-8">
 				<div className="text-sm tracking-widest text-[#ff9900] mb-2 font-bold uppercase">
 					Our Core Values
 				</div>
@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl mb-12">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl mb-2">
 				{features.map((feature) => (
 					<div
 						key={feature.title}
@@ -68,24 +68,35 @@ export default function WhyChooseUs() {
 				))}
 			</div>
 
-			<button className="bg-[#ff9900] text-white px-8 py-3 rounded-lg font-semibold text-base
-			hover:bg-[#b97a1a] transition-colors duration-300 shadow-md flex items-center gap-2">
+			<button className="group relative bg-[#ff9900] text-white px-8 py-3 rounded-lg font-semibold text-base
+			border-2 border-[#ff9900] overflow-hidden shadow-md flex items-center gap-2
+			transition-colors duration-300 hover:text-[#ff9900] mt-2 mb-0"
+			>
+			{/* Animated fill */}
+			<span
+				className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100
+				transition-transform origin-left duration-300 z-0"
+				aria-hidden="true"
+			/>
+
+			{/* Content */}
+			<span className="relative z-10 flex items-center gap-2">
 				Start Your Project
 				<svg
-					width="18"
-					height="18"
-					fill="none"
-					stroke="currentColor"
-					strokeWidth="2"
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					className="feather feather-arrow-right"
-					viewBox="0 0 24 24"
-				>
-					<line x1="5" y1="12" x2="19" y2="12"></line>
-					<polyline points="12 5 19 12 12 19"></polyline>
+				width="18"
+				height="18"
+				fill="none"
+				stroke="currentColor"
+				strokeWidth="2"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				viewBox="0 0 24 24">
+				<line x1="5" y1="12" x2="19" y2="12" />
+				<polyline points="12 5 19 12 12 19" />
 				</svg>
+			</span>
 			</button>
+
 		</div>
 	);
 }

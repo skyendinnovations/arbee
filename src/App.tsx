@@ -23,28 +23,6 @@ export function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <div className="mt-8">
-            <div className="p-4 bg-white rounded shadow-sm text-left">
-              <h3 className="font-semibold mb-2">API Tester</h3>
-              <p className="text-sm text-gray-600 mb-3">Try calling the bundled API backend.</p>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={async () => {
-                    try {
-                      const r = await fetch('/api/hello');
-                      const j = await r.json();
-                      alert(JSON.stringify(j));
-                    } catch (e) {
-                      alert('Error: ' + String(e));
-                    }
-                  }}
-                  className="px-3 py-1 bg-indigo-600 text-white rounded"
-                >
-                  Call /api/hello
-                </button>
-              </div>
-            </div>
-          </div>
         </main>
         <WhyChooseUs />
         <Footer />
