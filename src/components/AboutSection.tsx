@@ -20,12 +20,6 @@ export default function AboutSection({
                 alt="Hands holding a house model"
                 className="w-full h-auto object-cover min-h-[480px] xl:min-h-[550px] 2xl:min-h-[600px]"
               />
-              {/* Decorative lines overlay */}
-              <div className="absolute bottom-0 left-0 w-1/3 h-3/4 bg-gradient-to-r from-white/5 to-transparent pointer-events-none">
-                <div className="absolute inset-0 opacity-20" style={{
-                  backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, white 10px, white 12px)',
-                }} />
-              </div>
             </div>
           </div>
 
